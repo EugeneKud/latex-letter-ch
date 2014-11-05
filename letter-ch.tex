@@ -1,178 +1,120 @@
+% LAYOUT OPTIONS {{{
 \documentclass[
-    SN, %% Swiss Letter Format
-    % SNleft, %% Address left
-    backaddress=true, %% ==> delete if not window enveloppe <==
+    SN, % Swiss Letter Format
+    % SNleft, % Address left
+    backaddress=true, % ==> delete if not window enveloppe <==
     fontsize=12pt,
     fromalign=left,
     fromemail=true,
     fromfax=false,
     fromphone=true,
-    fromrule=off, %% Horizontal, full width rule on the fromadress block
+    fromrule=off, % Horizontal, full width rule on the fromadress block
     fromurl=false,
     numericaldate=false,
     paper=a4,
     enlargefirstpage=true,
-    parskip=full, %% Line break between paragraphs instead of indent
+    parskip=full, % Line break between paragraphs instead of indent
     parskip=half,
     pagenumber=footcenter,
     subject=beforeopening,
     subject=left,
     subject=titled,
-    foldmarks=true, %% Folding lines on the left
-    % foldmarks=BhlmpTv, %% Top and bottom = fold in 3
-    foldmarks=bhlmPtv, %% Mid = fold in 2
+    foldmarks=true, % Folding lines on the left
+    % foldmarks=BhlmpTv, % Top and bottom = fold in 3
+    foldmarks=bhlmPtv, % Mid = fold in 2
 ]{scrlttr2}
-
-
-
-%-----------------------------------------------------------------------------
-% Packages
-%-----------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[frenchb]{babel}
-% \usepackage[ngerman]{babel}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Sender
-%-----------------------------------------------------------------------------
-\setkomavar{fromname}{Kudryavtsev Eugene}
-\setkomavar{signature}{Eugene Kudryavtsev}
-\setkomavar{fromaddress}{My Street 7}
-\setkomavar{fromphone}[]{+41 79 123 45 67}
-\setkomavar{fromfax}{my fax number}
-\setkomavar{fromemail}[]{eugene.kud@gmail.com}
-\setkomavar{fromurl}[]{mysite.ch}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Recipient Tweaks
-%-----------------------------------------------------------------------------
-% \setkomavar{backaddress}{Overwrite backaddress for windowed enveloppes}
-% \setkomavar{specialmail}{\textbf{RAPPEL}}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Information Line
-%-----------------------------------------------------------------------------
-\setkomavar{yourref}[MyCustomLabel]{some value}
-% \setkomavar{yourmail}{date of the letter}
-% \setkomavar{myref}{1}
-% \setkomavar{customer}{12}
-% \setkomavar{invoice}{1}
-\setkomavar{date}{\today}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Title & Subject
-%-----------------------------------------------------------------------------
-% \setkomavar{title}{Title of the letter}
-\setkomavar{subject}{Subject of the letter}
-% \setkomavar{subject}[]{Only Subject}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Separators
-%-----------------------------------------------------------------------------
-\setkomavar{backaddressseparator}{. }
-\setkomavar{ccseparator}{: }
-\setkomavar{emailseparator}{: }
-\setkomavar{enclseparator}{: }
-\setkomavar{faxseparator}{:}
-\setkomavar{phoneseparator}{: }
-\setkomavar{placeseparator}{, le }
-\setkomavar{subjectseparator}{: }
-\setkomavar{zipcodeseparator}{, }
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Misc. Variables
-%-----------------------------------------------------------------------------
-% \setkomavar{PPcode}{pp} % instructions for the sender’s identification code of option addrfield=PP
-% \setkomavar{PPdatamatrix}{pp} % instruction, that print the data array of option addrfield=PP
-% \setkomavar{addresseeimage}{} % instructions that will be used to print the Port-Payé head of option "addrfield=backgroundimage" or the Port-Payé addresse of option "addrfiled=image"
-% \setkomavar{firstfoot}{} % content of the very last line of the letter
-% \setkomavar{firsthead}{} % this option determines whether the letterhead will be typeset at all
-% \setkomavar{frombank}{UBS}
-% \setkomavar{fromlogo}{}
-% \setkomavar{fromzipcode}{}
-% \setkomavar{location}{}
-% \setkomavar{nextfoot}{}
-% \setkomavar{nexthead}{suivant}
-% \setkomavar{place}{}
-% \setkomavar{toaddress}{}
-% \setkomavar{toname}{}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Fonts
-%-----------------------------------------------------------------------------
-\setkomafont{addressee}{\ttfamily}
-\setkomafont{backaddress}{\ttfamily}
-\setkomafont{fromaddress}{\ttfamily}
-\setkomafont{fromname}{\ttfamily}
-% \setkomafont{subject}{\sffamily}
-%-----------------------------------------------------------------------------
-
-
-
-%-----------------------------------------------------------------------------
-% Vars Tweaks
-%-----------------------------------------------------------------------------
-% \renewcaptionname{french}{\enclname}{Annexes}
-% \renewcaptionname{ngerman}{\enclname}{Anlagen}
-\renewcommand*{\raggedsignature}{\raggedright} % (default signature center)
-%-----------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
+% }}}
+% ENCODING & LANGUAGES {{{
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[frenchb]{babel}
+    % \usepackage[ngerman]{babel}
+% }}}
+% SENDER INFO {{{
+    \setkomavar{fromname}{Kudryavtsev Eugene}
+    \setkomavar{signature}{Eugene Kudryavtsev}
+    \setkomavar{fromaddress}{My Street 7}
+    \setkomavar{fromphone}[]{+41 79 123 45 67}
+    \setkomavar{fromfax}{my fax number}
+    \setkomavar{fromemail}[]{eugene.kud@gmail.com}
+    \setkomavar{fromurl}[]{mysite.ch}
+% }}}
+% RECIPIENT TWEAKS {{{
+    % \setkomavar{backaddress}{Overwrite backaddress for windowed enveloppes}
+    % \setkomavar{specialmail}{\textbf{RAPPEL}}
+% }}}
+% INFO LINE VARIABLES {{{
+    \setkomavar{yourref}[MyCustomLabel]{some value}
+    % \setkomavar{yourmail}{date of the letter}
+    % \setkomavar{myref}{1}
+    % \setkomavar{customer}{12}
+    % \setkomavar{invoice}{1}
+    \setkomavar{date}{\today}
+% }}}
+% TITLE & SUBJECT {{{
+    % \setkomavar{title}{Title of the letter}
+    \setkomavar{subject}{Subject of the letter}
+    % \setkomavar{subject}[]{Only Subject}
+% }}}
+% SEPARATORS {{{
+    \setkomavar{backaddressseparator}{. }
+    \setkomavar{ccseparator}{: }
+    \setkomavar{emailseparator}{: }
+    \setkomavar{enclseparator}{: }
+    \setkomavar{faxseparator}{:}
+    \setkomavar{phoneseparator}{: }
+    \setkomavar{placeseparator}{, le }
+    \setkomavar{subjectseparator}{: }
+    \setkomavar{zipcodeseparator}{, }
+% }}}
+% MISC. VARS {{{
+    % \setkomavar{PPcode}{pp} % instructions for the sender’s identification code of option addrfield=PP
+    % \setkomavar{PPdatamatrix}{pp} % instruction, that print the data array of option addrfield=PP
+    % \setkomavar{addresseeimage}{} % instructions that will be used to print the Port-Payé head of option "addrfield=backgroundimage" or the Port-Payé addresse of option "addrfiled=image"
+    % \setkomavar{firstfoot}{} % content of the very last line of the letter
+    % \setkomavar{firsthead}{} % this option determines whether the letterhead will be typeset at all
+    % \setkomavar{frombank}{UBS}
+    % \setkomavar{fromlogo}{}
+    % \setkomavar{fromzipcode}{}
+    % \setkomavar{location}{}
+    % \setkomavar{nextfoot}{}
+    % \setkomavar{nexthead}{suivant}
+    % \setkomavar{place}{}
+    % \setkomavar{toaddress}{}
+    % \setkomavar{toname}{}
+% }}}
+% FONTS {{{
+    \setkomafont{addressee}{\ttfamily}
+    \setkomafont{backaddress}{\ttfamily}
+    \setkomafont{fromaddress}{\ttfamily}
+    \setkomafont{fromname}{\ttfamily}
+    % \setkomafont{subject}{\sffamily}
+% }}}
+% VARS TWEAKS {{{
+    % \renewcaptionname{french}{\enclname}{Annexes}
+    % \renewcaptionname{ngerman}{\enclname}{Anlagen}
+    \renewcommand*{\raggedsignature}{\raggedright} % (default signature center)
+% }}}
 
 \begin{document}
 
-\begin{letter}{
-    First/Last Name Recipient\\
+\begin{letter}{Salut\\
     Street Name/Number Recipient\\
     ZIP-Code/City Recipient\\
     Country Recipient
 }
 
-    \opening{Chère Madame, cher Monsieur,}
-
-    Lorem ipsum dolor sit amet, eum no numquam propriae comprehensam, qualisque molestiae et nec. Eum ex esse percipitur. Fabellas posidonium usu ut. Eam in legere praesent qualisque, at nec solum utroque.
-
-    Vis at pertinacia consequuntur. Has rebum elitr at, ius percipit cotidieque et. Cu ius invidunt vivendum complectitur, graeci nusquam sapientem sea an, vel gloriatur dissentiunt at. Ea soluta aperiam scripserit sit, diam virtute molestie sea ut. Magna aeterno labores ne eam. Hinc simul persius ea per, eos labore euismod ad, ad cum etiam postea.
+\opening{Chère Madame, cher Monsieur,}
 
     At insolens definitiones eum. Facete habemus antiopam in sed, eos no vide melius veritus. Mei te hinc duis homero, quot assum usu cu. His ne magna audiam, minim cotidieque per ex. Diam essent mel eu.
 
-    \closing{Je vous adresse, Madame, Monsieur, mes salutations distinguées.}
+\closing{Meilleures Salutations}
 
-    \cc{Hello}
+\cc{Hello}
 
-    \encl{
-        Enclosure 1\\
-        Enclosure 2\\
-    }
+\encl{Enclosure 1\\
+    Enclosure 2\\
+}
 
 \end{letter}
 
